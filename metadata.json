@@ -1,0 +1,6 @@
+{
+  "name": "ShareAPlate - Food Rescue Network",
+  "description": "Hyper-local zero food waste platform connecting commercial kitchens, verified shelters, and volunteer dispatch across Bengaluru.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
