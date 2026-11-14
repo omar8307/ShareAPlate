@@ -1,0 +1,6 @@
+{
+  "name": "ShareAPlate",
+  "description": "Smart community food waste reduction and donation platform connecting food donors, verified NGOs, and volunteers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
