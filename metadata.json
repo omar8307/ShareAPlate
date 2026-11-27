@@ -1,0 +1,6 @@
+{
+  "name": "ShareAMeal Logistics Control",
+  "description": "Real-time surplus food rescue, autonomous dispatch command, donor manifest publishing, and smart NGO claiming platform for Bengaluru.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

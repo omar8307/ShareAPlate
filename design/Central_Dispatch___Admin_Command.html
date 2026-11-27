@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#266b44", "surface-container-highest": "#dce5d9", "on-surface-variant": "#404943", "on-tertiary-fixed": "#2a1800", "primary-fixed": "#b8efd0", "surface-container": "#e8f0e4", "outline": "#717973", "outline-variant": "#c0c9c1", "background": "#f3fcef", "primary": "#003421", "secondary-container": "#a9f0be", "on-primary-fixed-variant": "#1c5039", "tertiary-fixed": "#ffddb6", "on-primary-container": "#86ba9e", "inverse-primary": "#9dd2b5", "primary-fixed-dim": "#9dd2b5", "surface-tint": "#366850", "primary-container": "#174b35", "tertiary-fixed-dim": "#ffb959", "on-primary": "#ffffff", "on-secondary": "#ffffff", "surface-dim": "#d4ddd0", "on-primary-fixed": "#002113", "tertiary": "#412700", "inverse-surface": "#2a322a", "surface": "#f3fcef", "on-error-container": "#93000a", "surface-variant": "#dce5d9", "on-secondary-fixed": "#00210f", "on-background": "#161d16", "error": "#ba1a1a", "on-surface": "#161d16", "on-secondary-container": "#2b6f48", "on-tertiary-container": "#e8a13a", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#643f00", "surface-container-high": "#e2ebde", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#90d6a6", "tertiary-container": "#5e3b00", "on-secondary-fixed-variant": "#02522e", "surface-bright": "#f3fcef", "inverse-on-surface": "#eaf3e7", "secondary-fixed": "#abf2c1", "error-container": "#ffdad6", "surface-container-low": "#edf6e9", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-md": [ "Inter" ], "headline-lg": [ "Manrope" ], "headline-sm": [ "Manrope" ], "headline-md": [ "Manrope" ], "body-sm": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "label-lg": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "body-lg": [ "Inter" ], "headline-lg-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md px-space-md"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><img alt="ShareAMeal Official Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBOmepk9N1B4Rwq9zUUxdmA6rLniyj_uYGsd69kv-sqe50NmhyrJnApeneBb3AqaEMOAgScL6uqWhIcu4kkD9JcligvmkWy9GkuWYZSqpKbLSan-hPXgNw993Ran6tBAQFM5e-_di1LJ-Xb3qLDjGR34KEjHV5drT9qmS26nuffIo91HsnM65Zamb3O6USbPeIJRMH9h9p8oGo4-ccBzd8uM_ZjbjFWfDQgZEkXvno"/><div class="flex flex-col"><span class="font-headline-sm text-primary leading-tight">ShareAMeal</span><span class="font-label-sm text-secondary">Logistics Control</span></div></div><div class="px-space-xs"><div class="bg-surface-container-high rounded-lg p-space-sm"><div class="flex items-center justify-between font-label-sm text-on-surface-variant"><span class="flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>Active Hub</span><span class="font-label-md text-primary">BLR Central</span></div><div class="font-body-sm text-outline mt-1">Indiranagar Dispatch Node</div></div></div><nav class="flex flex-col gap-1 font-label-md" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dispatch-control" href="#"><span class="material-symbols-outlined text-[20px]">hub</span>Live Fleet Dispatch</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="surplus-manifest" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span>Surplus Manifest</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ngo-directory" href="#"><span class="material-symbols-outlined text-[20px]">home_work</span>NGO Shelters</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-bold rounded-lg" data-path="volunteer-dispatch" href="#"><span class="material-symbols-outlined text-[20px]">electric_moped</span>Volunteers on Duty</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="food-safety-audit" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Safety &amp; Temperature</a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="bg-secondary-container/40 p-space-sm rounded-lg flex flex-col gap-1"><span class="font-label-sm text-secondary font-bold uppercase tracking-wider">Network Velocity</span><div class="flex items-baseline justify-between"><span class="font-headline-sm text-primary">34 min</span><span class="font-label-sm text-secondary">Avg Pickup ETA</span></div><p class="font-body-sm text-on-surface-variant">99.4% cold-chain compliance</p></div><a class="flex items-center gap-space-xs px-space-sm py-space-xs font-label-md text-on-surface-variant hover:text-on-surface" data-path="home" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span>Exit to Public Portal</a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="ShareAMeal Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBOmepk9N1B4Rwq9zUUxdmA6rLniyj_uYGsd69kv-sqe50NmhyrJnApeneBb3AqaEMOAgScL6uqWhIcu4kkD9JcligvmkWy9GkuWYZSqpKbLSan-hPXgNw993Ran6tBAQFM5e-_di1LJ-Xb3qLDjGR34KEjHV5drT9qmS26nuffIo91HsnM65Zamb3O6USbPeIJRMH9h9p8oGo4-ccBzd8uM_ZjbjFWfDQgZEkXvno"/><div class="relative flex items-center bg-surface-container rounded-lg px-space-sm py-space-xs"><label class="sr-only" for="dash-role-switcher">Switch Persona</label><select class="bg-transparent font-label-md text-on-surface focus:outline-none cursor-pointer pr-space-sm" id="dash-role-switcher"><option selected="" value="admin">Admin Operations</option><option value="ngo">Shelter / NGO Partner</option><option value="donor">Food Donor</option><option value="volunteer">Rescue Volunteer</option><option value="public">Public View</option></select></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-high px-space-sm py-space-xs rounded-full font-label-sm text-on-surface-variant"><span class="h-2 w-2 rounded-full bg-secondary"></span><span>Bengaluru Central Cluster Active</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-lg"><div class="flex flex-col w-full pb-space-xl">
+<!-- Operational Ticker / Emergency Broadcast -->
+<div class="mb-space-lg bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="flex h-3 w-3 relative flex-shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<div class="flex items-baseline gap-space-xs truncate">
+<span class="font-label-sm uppercase tracking-wider text-secondary font-bold">Autonomous Dispatch</span>
+<span class="font-body-md text-on-surface truncate">BLR Cluster: 18 live automated matches executed in last 12 minutes. Real-time temperature logs 100% nominal.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm px-space-sm py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">search_off</span>
+        Avg Turnaround: 28m
+      </span>
+<button class="bg-primary text-on-primary hover:bg-primary-container font-label-sm px-space-sm py-1 rounded-lg transition-colors flex items-center gap-1 shadow-sm" onclick="triggerSimulatedEvent()">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+        Simulate Urgent Intake
+      </button>
+</div>
+</div>
+<!-- Platform Command KPIs -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">insights</span>
+<h2 class="font-headline-sm text-primary">Platform Command Metrics</h2>
+</div>
+<span class="font-label-sm text-on-surface-variant">Live synced with Bengaluru Metropolitan Supply Grid</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="absolute right-0 top-0 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-on-surface-variant">Rescues this Month</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-primary tracking-tight">1,420</span>
+<span class="font-label-sm text-secondary flex items-center font-bold">↑ 18.4%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 82%"></div>
+</div>
+<span class="font-body-sm text-outline mt-2 text-[11px]">82% of monthly target (1,750)</span>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-on-surface-variant">Pending NGO KYC</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">badge</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-tertiary-container tracking-tight" id="kpi-pending-kyc">28</span>
+<span class="font-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-1.5 py-0.5 rounded text-[10px] font-bold">Action Needed</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full rounded-full" style="width: 45%"></div>
+</div>
+<span class="font-body-sm text-outline mt-2 text-[11px]">Avg review time: 4.2 hrs</span>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-on-surface-variant">Volunteers on Road</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">two_wheeler</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-primary tracking-tight">314</span>
+<span class="font-label-sm text-secondary flex items-center font-bold">Active</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 91%"></div>
+</div>
+<span class="font-body-sm text-outline mt-2 text-[11px]">89 in transit, 225 on standby</span>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-on-surface-variant">Food Safety Rating</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">health_and_safety</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-primary tracking-tight">99.1%</span>
+<span class="font-label-sm text-secondary font-bold">Grade A</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 99.1%"></div>
+</div>
+<span class="font-body-sm text-outline mt-2 text-[11px]">FSSAI audit compliant (Q3)</span>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-on-surface-variant">Incident Escalations</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-primary tracking-tight">0</span>
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full text-[10px] font-bold">Zero Breach</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-body-sm text-outline mt-2 text-[11px]">Consecutive 42 days faultless</span>
+</div>
+</div>
+</section>
+<!-- Main Dual Workspace: Dispatch Controller & Route Simulation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- LEFT: Interactive Volunteer Dispatch Feed (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">moped</span>
+            Live Rescue Dispatch &amp; Volunteer Simulation
+          </h2>
+<p class="font-body-sm text-on-surface-variant">Active field routing with telemetry &amp; digital chain-of-custody verification</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-2.5 py-1 rounded-full font-bold">Live Stream</span>
+</div>
+</div>
+<!-- Primary Action Interactive Card (Task #BFR-8891) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md bg-primary text-on-primary px-space-sm py-1 rounded-md font-bold">#BFR-8891</span>
+<span class="font-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-space-xs py-0.5 rounded font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              Expiring in 1h 45m
+            </span>
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-medium">Hot Cooked Meals (80 pax)</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-label-md">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<span>3.4 km • ETA 12 mins</span>
+</div>
+</div>
+<!-- Route Nodes -->
+<div class="py-space-md grid grid-cols-1 md:grid-cols-2 gap-space-md relative">
+<!-- Donor Node -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 text-on-primary">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-outline uppercase tracking-wider">Pickup Donor</span>
+<h3 class="font-label-lg text-on-surface truncate">Empire Restaurant, Church St.</h3>
+<p class="font-body-sm text-on-surface-variant truncate">Tray Sealed • Biryani &amp; Dal • Pack temp: 64°C</p>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-xs text-outline pt-space-xs border-t border-surface-container">
+<span>Donor PIN: 560001</span>
+<span class="text-secondary font-label-sm font-semibold">Verified Safe Pack</span>
+</div>
+</div>
+<!-- NGO Node -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 text-on-secondary">
+<span class="material-symbols-outlined text-[18px]">holiday_village</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-outline uppercase tracking-wider">Destination Shelter</span>
+<h3 class="font-label-lg text-on-surface truncate">Shanti Mandir Night Shelter</h3>
+<p class="font-body-sm text-on-surface-variant truncate">Capacity: 120 Beds • Wilson Garden Gate #2</p>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-xs text-outline pt-space-xs border-t border-surface-container">
+<span>Contact: Br. Anand K.</span>
+<span class="text-secondary font-label-sm font-semibold">Pre-notified &amp; Ready</span>
+</div>
+</div>
+</div>
+<!-- Simulation Interactive Lifecycle Controller -->
+<div class="bg-surface-container p-space-md rounded-xl mt-space-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">sports_score</span>
+              Volunteer Workflow Simulation Box
+            </span>
+<span class="font-label-sm bg-primary-container text-on-primary px-2.5 py-0.5 rounded-full font-bold" id="workflow-current-stage">
+              Stage 1: Awaiting Volunteer Acceptance
+            </span>
+</div>
+<!-- Step Progression Timeline -->
+<div class="grid grid-cols-3 gap-2 text-center mb-space-md">
+<div class="py-1 px-2 rounded font-label-sm transition-all bg-primary text-on-primary font-semibold" id="step-marker-1">
+              1. Accept Task
+            </div>
+<div class="py-1 px-2 rounded font-label-sm transition-all bg-surface-container-highest text-on-surface-variant" id="step-marker-2">
+              2. OTP &amp; QR Verify
+            </div>
+<div class="py-1 px-2 rounded font-label-sm transition-all bg-surface-container-highest text-on-surface-variant" id="step-marker-3">
+              3. Proof of Delivery
+            </div>
+</div>
+<!-- Dynamic Action Panel -->
+<div class="flex flex-col gap-space-sm" id="action-panel-stage">
+<!-- Stage 1 View -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm" id="stage-1-controls">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<span class="font-label-md text-on-surface block">Candidate: Manoj Kumar (EV Moped #KA-03-HM-4109)</span>
+<span class="font-body-sm text-outline">Distance to pickup: 450m • Rating 4.97 ★</span>
+</div>
+</div>
+<button class="w-full sm:w-auto bg-primary text-on-primary hover:bg-primary-container font-label-md px-space-md py-2.5 rounded-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-all" onclick="advanceWorkflow(2)">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                Accept &amp; Lock Task
+              </button>
+</div>
+<!-- Stage 2 View (Hidden by default) -->
+<div class="hidden flex-col gap-space-sm" id="stage-2-controls">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">qr_code_scanner</span>
+<div>
+<span class="font-label-md text-on-surface block">At Empire Restaurant Kitchen Counter</span>
+<span class="font-body-sm text-on-surface-variant">Scan thermal container code or input donor handoff PIN</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<input class="w-24 text-center font-headline-sm bg-surface-container rounded-lg py-1 px-2 text-primary focus:outline-none focus:ring-2 focus:ring-primary font-bold tracking-widest" id="pickup-otp-input" maxlength="4" type="text" value="8492"/>
+<button class="bg-secondary text-on-secondary hover:bg-secondary/90 font-label-md px-space-md py-2.5 rounded-lg font-bold flex items-center gap-1 shadow-sm transition-all whitespace-nowrap" onclick="advanceWorkflow(3)">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+                    Verify Pickup OTP
+                  </button>
+</div>
+</div>
+</div>
+<!-- Stage 3 View (Hidden by default) -->
+<div class="hidden flex-col gap-space-sm" id="stage-3-controls">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">add_a_photo</span>
+</div>
+<div>
+<span class="font-label-md text-on-surface block font-semibold">Arrived at Shanti Mandir NGO</span>
+<span class="font-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Recipient Confirmed: Sister Theresa
+                    </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto">
+<button class="w-full md:w-auto bg-primary text-on-primary hover:bg-primary-container font-label-md px-space-md py-2.5 rounded-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-all" onclick="completeTaskDelivery()">
+<span class="material-symbols-outlined text-[18px]">camera</span>
+                    Upload Safe Photo &amp; Complete
+                  </button>
+</div>
+</div>
+</div>
+<!-- Completed View (Hidden by default) -->
+<div class="hidden p-space-sm bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-between" id="stage-complete-controls">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-secondary">task_alt</span>
+<div>
+<span class="font-label-md font-bold block">Delivery Protocol Fully Authenticated</span>
+<span class="font-body-sm">Audit Certificate #SHA-2023-BLR8891 registered to safety ledger.</span>
+</div>
+</div>
+<button class="font-label-sm bg-primary text-on-primary px-space-sm py-1.5 rounded font-bold hover:bg-primary-container transition-colors" onclick="resetWorkflow()">
+                Reset Demo
+              </button>
+</div>
+</div>
+</div>
+<!-- Real-time Dispatch Map Snapshot -->
+<div class="mt-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-outline uppercase tracking-wider">Telemetry Routing: Empire Church St → Shanti Mandir</span>
+<span class="font-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span> Congestion: Minimal (MG Road Underpass Clear)
+            </span>
+</div>
+<div class="w-full h-44 rounded-lg bg-cover bg-center shadow-inner relative flex items-end p-space-sm" data-location="Indiranagar to Wilson Garden, Bengaluru, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEECTJW04OlEhHT0Xsz7Hp_7uK1u_NvDK-LgAj0MQt6m8jbuTiF9xmjotTI1l1YBEHlXCQojVv9dvxxxpS-ZuBVIyE2iWot2PcVXTVpJ7RsYnnfm2qQA5KOIRYXZa3xz_JC6imYt-8WPTUJntmeJOrMkQocBqPRauUr0Lq-5XZIQHDCcvgnyo5dPWpI6qbbukAIZD-KX3o5SbOR-fd0aW5t9adMV5EkEAtWsFOlyY')">
+<div class="bg-surface/90 backdrop-blur-md px-space-sm py-1.5 rounded-md flex items-center gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">electric_moped</span>
+<span class="font-label-sm text-on-surface">Volunteer Manoj K. current speed: 32 km/h</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Tasks Queue Mini-table -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-primary">Standby Rescue Queue</h3>
+<span class="font-label-sm text-outline">3 waiting dispatchers</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Row 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors bg-surface-container/30">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="truncate">
+<span class="font-label-md text-on-surface font-semibold">ITC Gardenia Banquet Hall → Hope Children's Home</span>
+<p class="font-body-sm text-outline">140 Pax Continental &amp; Bread • Koramangala (4.2 km)</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<span class="font-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Auto-Assigning</span>
+<button class="text-secondary hover:text-primary p-1" title="Inspect">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors bg-surface-container/30">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary flex-shrink-0"></span>
+<div class="truncate">
+<span class="font-label-md text-on-surface font-semibold">Tesco Campus Cafeteria → Snehadhara Foundation</span>
+<p class="font-body-sm text-outline">65 kg Dry Groceries &amp; Fruit Baskets • Whitefield (6.8 km)</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<span class="font-label-sm text-on-tertiary-fixed bg-tertiary-fixed px-2 py-0.5 rounded">Courier En Route</span>
+<button class="text-secondary hover:text-primary p-1" title="Inspect">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: NGO Document Review & KYC Verification Queue (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified</span>
+            NGO KYC Compliance Queue
+          </h2>
+<p class="font-body-sm text-on-surface-variant">Review Section 80G, FSSAI, &amp; Kitchen Cold Chain readiness</p>
+</div>
+<span class="font-label-sm bg-surface-container-high text-on-surface px-2 py-1 rounded font-bold">28 Pending</span>
+</div>
+<!-- Active Review Application Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative flex flex-col justify-between" id="ngo-review-card">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-headline-sm font-bold">
+                KS
+              </div>
+<div>
+<h3 class="font-headline-sm text-on-surface">Krupa Seva Society</h3>
+<span class="font-body-sm text-outline">Registered Trust #BLR-IV/4401-2018</span>
+</div>
+</div>
+<span class="font-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-space-xs py-0.5 rounded font-bold">
+              Action Req.
+            </span>
+</div>
+<!-- Audit Overview Badges -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-md text-xs">
+<div class="bg-surface-container-low p-2 rounded-lg">
+<span class="font-label-sm text-outline block">Beneficiary Target</span>
+<span class="font-label-md text-on-surface font-semibold">350 Meals / Day</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg">
+<span class="font-label-sm text-outline block">Location Facility</span>
+<span class="font-label-md text-on-surface font-semibold">Shivajinagar, Hub #4</span>
+</div>
+</div>
+<!-- Document Inspection Section -->
+<div class="space-y-space-sm mb-space-md">
+<span class="font-label-sm text-outline uppercase tracking-wider block">Submitted Digital Credentials</span>
+<!-- Doc 1: 80G -->
+<div class="flex items-center justify-between p-space-xs px-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">description</span>
+<div>
+<span class="font-label-md text-on-surface block font-medium">80G Income Tax Exemption</span>
+<span class="font-body-sm text-secondary text-[11px]">Valid thru Mar 2027 • Approved</span>
+</div>
+</div>
+<button class="text-secondary hover:text-primary font-label-sm font-semibold flex items-center gap-0.5" onclick="previewDoc('80G Certification: Krupa Seva')">
+                Inspect <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- Doc 2: FSSAI License -->
+<div class="flex items-center justify-between p-space-xs px-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">health_and_safety</span>
+<div>
+<span class="font-label-md text-on-surface block font-medium">FSSAI State Reg #1122033400091</span>
+<span class="font-body-sm text-secondary text-[11px]">Category: Charitable Food Service</span>
+</div>
+</div>
+<button class="text-secondary hover:text-primary font-label-sm font-semibold flex items-center gap-0.5" onclick="previewDoc('FSSAI Food License #1122033400091')">
+                Inspect <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- Doc 3: Cold Chain Storage Audit -->
+<div class="flex items-center justify-between p-space-xs px-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">ac_unit</span>
+<div>
+<span class="font-label-md text-on-surface block font-medium">Cold Storage Facility Audit</span>
+<span class="font-body-sm text-on-surface-variant text-[11px]">Commercial Deep Freezer 200L • Validated</span>
+</div>
+</div>
+<button class="text-secondary hover:text-primary font-label-sm font-semibold flex items-center gap-0.5" onclick="previewDoc('Cold Chain Infrastructure Report')">
+                Inspect <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Kitchen & Intake Audit Visual Check -->
+<div class="mb-space-md">
+<span class="font-label-sm text-outline uppercase tracking-wider block mb-space-xs">Facility Video Audit Snapshot</span>
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A brightly lit clean commercial community kitchen in Bangalore with stainless steel worktables, deep freezers, food grade storage bins, and sanitation protocols visible in warm daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd2hUtxp7B-1TstEI4CgKKy92Z-q2_MJg6zHL111RAyV4xFkv6UOd-I4Yqh4sak9pvOOiR5tKd7jLirg6a_3CUIajYw9pzfPeBjQRsrrmZIOb90vsb4A5yaWl3etkGlkRHStJ9vhCwMAIqElxGowYkWL__TNsRdfzPXvUK0XOD07T2pwPweUgCThAC4W3T3cSKgVPfTCJ98IZKVJ-4W9qLz_dGgrnd5xY6J9gmB3E"/>
+<div class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+                Field Inspector geotagged: 12.9833° N, 77.5997° E
+              </div>
+</div>
+</div>
+</div>
+<!-- Decision Triage Buttons -->
+<div class="pt-space-sm border-t border-surface-container flex flex-col gap-space-xs">
+<div class="flex gap-space-xs">
+<button class="flex-1 bg-primary text-on-primary hover:bg-primary-container font-label-md py-2.5 rounded-lg font-bold flex items-center justify-center gap-1 shadow-sm transition-all" onclick="approveKYC('Krupa Seva Society')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+              Approve Verification
+            </button>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md px-space-md py-2.5 rounded-lg font-semibold flex items-center gap-1 transition-all" onclick="requestMoreInfo('Krupa Seva Society')">
+<span class="material-symbols-outlined text-[18px]">contact_support</span>
+              Request Info
+            </button>
+</div>
+<button class="text-error hover:bg-error-container/30 font-label-sm py-1.5 rounded flex items-center justify-center gap-1 transition-colors" onclick="flagReinspection('Krupa Seva Society')">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+            Flag for In-Person Re-Inspection
+          </button>
+</div>
+</div>
+<!-- Quick NGO Verification mini-queue -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<span class="font-label-sm text-outline uppercase tracking-wider block mb-space-xs">Next in Queue</span>
+<div class="divide-y divide-surface-container">
+<div class="py-space-xs flex items-center justify-between">
+<div>
+<span class="font-label-md text-on-surface block font-medium">Ashraya Bal Bhavan</span>
+<span class="font-body-sm text-outline">Kengeri • 120 Children Shelter</span>
+</div>
+<span class="font-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">Needs FSSAI Renewal</span>
+</div>
+<div class="py-space-xs flex items-center justify-between">
+<div>
+<span class="font-label-md text-on-surface block font-medium">Grace Elders Home</span>
+<span class="font-body-sm text-outline">Ulsoor • 45 Senior Citizens</span>
+</div>
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Audit Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Food Safety & Cold Chain Monitor Section -->
+<section class="mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-space-md gap-space-xs">
+<div>
+<h2 class="font-headline-sm text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">device_thermostat</span>
+          Food Safety &amp; FSSAI Compliance Monitor
+        </h2>
+<p class="font-body-sm text-on-surface-variant">Continuous IoT probe tracking, bacterial safe zones, and perishable transit audits</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm bg-surface-container-high text-on-surface px-space-sm py-1 rounded-full flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-secondary"></span> 14 Active IoT Thermal Sensors
+        </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Cold Chain Live Gauge -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-on-surface-variant font-medium">Chilled Dairy &amp; Desserts Carrier #T-12</span>
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-bold">Optimal</span>
+</div>
+<div class="flex items-center gap-space-md my-space-sm">
+<div class="w-16 h-16 rounded-full bg-secondary-container/50 flex items-center justify-center text-secondary font-headline-md font-extrabold">
+              3.8°C
+            </div>
+<div>
+<span class="font-label-sm text-outline block">FSSAI Target: 0°C - 5°C</span>
+<span class="font-body-sm text-on-surface font-semibold">Sensor S-44 (Whitefield Van)</span>
+<span class="font-body-sm text-secondary block text-[11px]">✓ No spike detected in 180 min</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container">
+<div class="flex justify-between text-xs text-outline mb-1">
+<span>Container Seal Status</span>
+<span class="text-primary font-semibold">Tamper-Proof Locked</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Hot Holding Monitor with Alert -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-on-surface-variant font-medium">Hot Transit Pod #H-09 (Rice &amp; Curry)</span>
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-bold">Safe Zone</span>
+</div>
+<div class="flex items-center gap-space-md my-space-sm">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-headline-md font-extrabold">
+              63.2°C
+            </div>
+<div>
+<span class="font-label-sm text-outline block">FSSAI Min Limit: &gt; 60°C</span>
+<span class="font-body-sm text-on-surface font-semibold">Insulated Thermal Cask</span>
+<span class="font-body-sm text-secondary block text-[11px]">ETA to distribution: 8 min</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container">
+<div class="flex justify-between text-xs text-outline mb-1">
+<span>Thermal Retention Efficiency</span>
+<span class="text-secondary font-semibold">94%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+<!-- Card 3: Shelf-life Warning Audit & Auto-divert -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-on-surface-variant font-medium">High Perishability Alert</span>
+<span class="font-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-bold">45 min window</span>
+</div>
+<div class="flex items-start gap-space-sm my-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[28px]">notification_important</span>
+<div>
+<h4 class="font-label-lg text-on-surface">Bakery Confectionery Batch #C-21</h4>
+<p class="font-body-sm text-on-surface-variant">Fresh cream pastries from Lavelle Road Cafe. Ambient temperature limit approaching threshold.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-outline text-[12px]">Auto-diverted to: St. John's Youth Shelter (1.1 km away)</span>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm px-space-sm py-1.5 rounded transition-colors whitespace-nowrap" onclick="resolvePerishableAlert(this)">
+            Confirm Route
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bengaluru City Food Waste & Demand Heatmap Analytics -->
+<section class="mb-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-space-md gap-space-xs">
+<div>
+<h2 class="font-headline-sm text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+          Bengaluru City Food Surplus vs. Hunger Deficit Analytics
+        </h2>
+<p class="font-body-sm text-on-surface-variant">Real-time zone balance algorithm calculating autonomous rerouting vectors</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container-highest text-on-surface font-label-sm px-space-sm py-1 rounded-lg">Today</button>
+<button class="bg-primary text-on-primary font-label-sm px-space-sm py-1 rounded-lg">7-Day Trend</button>
+<button class="bg-surface-container-highest text-on-surface font-label-sm px-space-sm py-1 rounded-lg">Predictive 48h</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Zone Balance Chart (SVG Graphic) - 8 Cols -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-lg text-primary font-bold">Zone Inventory Equilibrium (Surplus (+) vs Demand Deficit (-))</span>
+<div class="flex items-center gap-space-md text-xs">
+<span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm bg-secondary"></span> Surplus Donated (kg)</span>
+<span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm bg-tertiary-fixed-dim"></span> Shelter Deficit (kg)</span>
+</div>
+</div>
+<!-- Inline SVG Visualization Chart -->
+<div class="w-full overflow-x-auto">
+<svg class="w-full h-64 text-on-surface" viewbox="0 0 700 240">
+<!-- Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.08" x1="60" x2="680" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.08" x1="60" x2="680" y1="70" y2="70"></line>
+<line stroke="currentColor" stroke-opacity="0.2" x1="60" x2="680" y1="120" y2="120"></line>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.08" x1="60" x2="680" y1="170" y2="170"></line>
+<line stroke="currentColor" stroke-opacity="0.08" x1="60" x2="680" y1="210" y2="210"></line>
+<!-- Y Axis Labels -->
+<text class="text-[10px] fill-current opacity-40 font-mono" text-anchor="end" x="50" y="24">+500kg</text>
+<text class="text-[10px] fill-current opacity-40 font-mono" text-anchor="end" x="50" y="74">+250kg</text>
+<text class="text-[10px] fill-current font-bold opacity-70 font-mono" text-anchor="end" x="50" y="124">0 kg</text>
+<text class="text-[10px] fill-current opacity-40 font-mono" text-anchor="end" x="50" y="174">-250kg</text>
+<text class="text-[10px] fill-current opacity-40 font-mono" text-anchor="end" x="50" y="214">-500kg</text>
+<!-- Bars: Indiranagar (+420kg, -80kg) -->
+<rect class="fill-secondary transition-all hover:opacity-80" height="84" rx="4" width="30" x="90" y="36"></rect>
+<rect class="fill-tertiary-fixed-dim transition-all hover:opacity-80" height="20" rx="4" width="30" x="125" y="120"></rect>
+<text class="text-[11px] fill-current font-semibold" text-anchor="middle" x="122" y="232">Indiranagar</text>
+<text class="text-[10px] fill-secondary font-bold" text-anchor="middle" x="105" y="30">+420</text>
+<!-- Bars: Koramangala (+380kg, -120kg) -->
+<rect class="fill-secondary transition-all hover:opacity-80" height="76" rx="4" width="30" x="210" y="44"></rect>
+<rect class="fill-tertiary-fixed-dim transition-all hover:opacity-80" height="30" rx="4" width="30" x="245" y="120"></rect>
+<text class="text-[11px] fill-current font-semibold" text-anchor="middle" x="242" y="232">Koramangala</text>
+<text class="text-[10px] fill-secondary font-bold" text-anchor="middle" x="225" y="38">+380</text>
+<!-- Bars: Wilson Garden (+50kg, -350kg) -->
+<rect class="fill-secondary transition-all hover:opacity-80" height="10" rx="4" width="30" x="330" y="110"></rect>
+<rect class="fill-tertiary-fixed-dim transition-all hover:opacity-80" height="85" rx="4" width="30" x="365" y="120"></rect>
+<text class="text-[11px] fill-current font-semibold" text-anchor="middle" x="362" y="232">Wilson Garden</text>
+<text class="text-[10px] fill-tertiary font-bold" text-anchor="middle" x="380" y="215">-350</text>
+<!-- Bars: Whitefield Tech Park (+490kg, -60kg) -->
+<rect class="fill-secondary transition-all hover:opacity-80" height="98" rx="4" width="30" x="450" y="22"></rect>
+<rect class="fill-tertiary-fixed-dim transition-all hover:opacity-80" height="15" rx="4" width="30" x="485" y="120"></rect>
+<text class="text-[11px] fill-current font-semibold" text-anchor="middle" x="482" y="232">Whitefield</text>
+<text class="text-[10px] fill-secondary font-bold" text-anchor="middle" x="465" y="16">+490</text>
+<!-- Bars: Shivajinagar (+90kg, -280kg) -->
+<rect class="fill-secondary transition-all hover:opacity-80" height="18" rx="4" width="30" x="570" y="102"></rect>
+<rect class="fill-tertiary-fixed-dim transition-all hover:opacity-80" height="70" rx="4" width="30" x="605" y="120"></rect>
+<text class="text-[11px] fill-current font-semibold" text-anchor="middle" x="602" y="232">Shivajinagar</text>
+<text class="text-[10px] fill-tertiary font-bold" text-anchor="middle" x="620" y="200">-280</text>
+</svg>
+</div>
+<div class="mt-space-sm p-space-sm bg-surface-container rounded-lg flex items-center justify-between text-xs">
+<span class="font-body-sm text-on-surface">
+<strong>Optimal Corridor:</strong> Automated dispatch routing 240kg surplus from Indiranagar restaurants to Wilson Garden shelters via MG Road arterial corridor.
+          </span>
+<span class="font-label-sm text-secondary font-bold whitespace-nowrap ml-space-sm">CO₂ Saved: 840 kg</span>
+</div>
+</div>
+<!-- Predictive Demand Forecasting Box - 4 Cols -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-lg text-primary font-bold">Predictive Hunger Forecast</span>
+<span class="font-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-bold">AI Model v4</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-space-md">Based on festival calendars, monsoon patterns, and corporate kitchen scheduled surplus.</p>
+<div class="space-y-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-on-surface font-semibold">Friday Night Corporate Spike</span>
+<span class="font-label-sm text-secondary font-bold">+620 Meals</span>
+</div>
+<p class="font-body-sm text-outline mt-1 text-xs">IT Parks Outer Ring Road • Scheduled for 21:30 Pickup</p>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2">
+<div class="bg-secondary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-on-surface font-semibold">Weekend Wedding Surplus</span>
+<span class="font-label-sm text-secondary font-bold">+1,200 Meals</span>
+</div>
+<p class="font-body-sm text-outline mt-1 text-xs">Palace Grounds Kalyana Mantapas • Heavy evening intake expected</p>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2">
+<div class="bg-secondary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-on-surface font-semibold">Rainfall Transit Contingency</span>
+<span class="font-label-sm text-tertiary font-bold">ETA +15 min</span>
+</div>
+<p class="font-body-sm text-outline mt-1 text-xs">IMD alert: Light rain south-east zones from 18:00 hrs</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md py-2.5 rounded-lg font-bold flex items-center justify-center gap-1 transition-colors" onclick="downloadLogisticsManifest()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Export Full Logistics Audit (CSV)
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Document Preview Scrim / Modal -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-primary/40 backdrop-blur-sm p-4" id="doc-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-xl shadow-2xl p-space-lg relative flex flex-col">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container mb-space-md">
+<h3 class="font-headline-sm text-primary" id="doc-modal-title">Credential Inspection</h3>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg" onclick="closeDocModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="h-64 rounded-lg bg-surface-container p-space-md flex flex-col items-center justify-center text-center mb-space-md overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-contain p-2" data-alt="Official verified Indian Government certification document with stamp, emblem, and registration watermark for charitable trust compliance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGXThS8DeZBBhBrYRJLMO0zevTK3n0de0qN8Faf1O3mTKcJ6GV1WbhiRHOyXqmqlP1KC5jM9KPupR4Aq16sFnMrvw-wSvvz1SslQzMkqrSt0H4jC4zjPCbEoKDYdkJj4aDogawCiKGF9Ixjd0P2mKIhrnJz-Cr30LOuHEYOoq1xfcSJHCATrWmGCLQJ3AMwiY4mLuMrzlGqTd1eZzhW1XCD1aqYYHou3ObZzCKmJA"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Digital Signature Certified
+        </span>
+<button class="bg-primary text-on-primary font-label-md px-space-md py-2 rounded-lg font-bold" onclick="closeDocModal()">
+          Done Reviewing
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+</div>
+<script>
+  // Volunteer Dispatch Simulation State Machine
+  function advanceWorkflow(targetStage) {
+    const s1 = document.getElementById('stage-1-controls');
+    const s2 = document.getElementById('stage-2-controls');
+    const s3 = document.getElementById('stage-3-controls');
+    const sc = document.getElementById('stage-complete-controls');
+    const label = document.getElementById('workflow-current-stage');
+
+    const m1 = document.getElementById('step-marker-1');
+    const m2 = document.getElementById('step-marker-2');
+    const m3 = document.getElementById('step-marker-3');
+
+    // Reset styles
+    [s1, s2, s3, sc].forEach(el => el.classList.add('hidden'));
+    [m1, m2, m3].forEach(el => {
+      el.className = 'py-1 px-2 rounded font-label-sm transition-all bg-surface-container-highest text-on-surface-variant';
+    });
+
+    if (targetStage === 2) {
+      s2.classList.remove('hidden');
+      s2.classList.add('flex');
+      label.textContent = 'Stage 2: Arrived at Donor (Pickup Verification)';
+      m1.className = 'py-1 px-2 rounded font-label-sm transition-all bg-secondary text-on-secondary font-semibold';
+      m2.className = 'py-1 px-2 rounded font-label-sm transition-all bg-primary text-on-primary font-semibold';
+      showToast('Task Accepted. Manoj K. locked to Empire Restaurant handoff.');
+    } else if (targetStage === 3) {
+      s3.classList.remove('hidden');
+      s3.classList.add('flex');
+      label.textContent = 'Stage 3: In Transit to Shelter (Delivery Confirmation)';
+      m1.className = 'py-1 px-2 rounded font-label-sm transition-all bg-secondary text-on-secondary font-semibold';
+      m2.className = 'py-1 px-2 rounded font-label-sm transition-all bg-secondary text-on-secondary font-semibold';
+      m3.className = 'py-1 px-2 rounded font-label-sm transition-all bg-primary text-on-primary font-semibold';
+      showToast('OTP 8492 Verified! 80 portions loaded into thermal container.');
+    }
+  }
+
+  function completeTaskDelivery() {
+    document.getElementById('stage-3-controls').classList.add('hidden');
+    const sc = document.getElementById('stage-complete-controls');
+    sc.classList.remove('hidden');
+    sc.classList.add('flex');
+
+    const m3 = document.getElementById('step-marker-3');
+    m3.className = 'py-1 px-2 rounded font-label-sm transition-all bg-secondary text-on-secondary font-semibold';
+    document.getElementById('workflow-current-stage').textContent = 'Mission Complete: Safe Delivery Verified';
+    showToast('Delivery photo uploaded & geo-validated! Shanti Mandir receipt acknowledged.');
+  }
+
+  function resetWorkflow() {
+    const s1 = document.getElementById('stage-1-controls');
+    const sc = document.getElementById('stage-complete-controls');
+    sc.classList.add('hidden');
+    s1.classList.remove('hidden');
+
+    const m1 = document.getElementById('step-marker-1');
+    const m2 = document.getElementById('step-marker-2');
+    const m3 = document.getElementById('step-marker-3');
+
+    m1.className = 'py-1 px-2 rounded font-label-sm transition-all bg-primary text-on-primary font-semibold';
+    m2.className = 'py-1 px-2 rounded font-label-sm transition-all bg-surface-container-highest text-on-surface-variant';
+    m3.className = 'py-1 px-2 rounded font-label-sm transition-all bg-surface-container-highest text-on-surface-variant';
+    document.getElementById('workflow-current-stage').textContent = 'Stage 1: Awaiting Volunteer Acceptance';
+    showToast('Simulation reset to initial state.');
+  }
+
+  // NGO Verification Queue Handlers
+  function approveKYC(ngoName) {
+    const card = document.getElementById('ngo-review-card');
+    card.classList.add('opacity-50', 'pointer-events-none');
+    
+    // Decrement pending counter
+    const kpi = document.getElementById('kpi-pending-kyc');
+    if (kpi) {
+      let count = parseInt(kpi.textContent);
+      if (count > 0) kpi.textContent = count - 1;
+    }
+
+    setTimeout(() => {
+      card.innerHTML = `
+        <div class="py-12 flex flex-col items-center justify-center text-center">
+          <span class="material-symbols-outlined text-[48px] text-secondary mb-2">task_alt</span>
+          <h3 class="font-headline-sm text-primary mb-1">${ngoName} Approved</h3>
+          <p class="font-body-sm text-on-surface-variant mb-4">Credentials committed to registry. NGO can now receive automated surplus dispatches.</p>
+          <button onclick="location.reload()" class="bg-surface-container-high text-on-surface font-label-sm px-space-md py-1.5 rounded">
+            Load Next Application
+          </button>
+        </div>
+      `;
+      card.classList.remove('opacity-50', 'pointer-events-none');
+      showToast(`${ngoName} approved for operations.`);
+    }, 400);
+  }
+
+  function requestMoreInfo(ngoName) {
+    showToast(`Request sent to ${ngoName} for supplemental documentation.`);
+  }
+
+  function flagReinspection(ngoName) {
+    showToast(`Flagged ${ngoName} for field safety re-audit.`);
+  }
+
+  // Document Inspection Modal
+  function previewDoc(title) {
+    document.getElementById('doc-modal-title').textContent = title;
+    const modal = document.getElementById('doc-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeDocModal() {
+    const modal = document.getElementById('doc-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Safety & Perishable Alert Handler
+  function resolvePerishableAlert(btn) {
+    btn.disabled = true;
+    btn.textContent = 'Rerouted ✓';
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-secondary', 'cursor-default');
+    showToast('Batch #C-21 successfully rerouted to St. John\'s Youth Shelter.');
+  }
+
+  // Simulated Quick Event
+  function triggerSimulatedEvent() {
+    showToast('Incoming surplus detected: Marriott Whitefield (120 packed dinners). Matching closest EV volunteer...');
+  }
+
+  function downloadLogisticsManifest() {
+    showToast('Downloading Bengaluru_Central_Manifest_Today.csv');
+  }
+
+  // Toast UI Generator
+  function showToast(message) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = 'bg-primary text-on-primary font-label-md px-4 py-3 rounded-lg shadow-xl flex items-center gap-2 pointer-events-auto transition-all transform translate-y-2 opacity-0';
+    toast.innerHTML = `<span class="material-symbols-outlined text-[18px] text-secondary-container">info</span> <span>${message}</span>`;
+    container.appendChild(toast);
+
+    requestAnimationFrame(() => {
+      toast.classList.remove('translate-y-2', 'opacity-0');
+    });
+
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'translate-y-2');
+      setTimeout(() => toast.remove(), 300);
+    }, 3500);
+  }
+</script></main></div></body></html>
